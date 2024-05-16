@@ -11,13 +11,21 @@ export default function App() {
   function addGoalHandler(enteredGoalText){
     setCourseGoals(currentGoals=>[...currentGoals, {text: enteredGoalText, key: Math.random().toString()}]);
   }
+
+
+  function deleteGoalHandler(){
+    console.log('Delete');
+
+  }
+
+
   return (
     <View style={styles.appContainer}>
       <GoalInput onAddGoal={addGoalHandler}/>
       <View style={styles.goalsContainer}>
       <FlatList data={courseGoals} renderItem={(itemData) => {
         return (
-          <GoalItem text={itemData.item.text} />);
+          <GoalItem text={itemData.item.text} onDeleteItem={deleteGoalHandler}/>);
          }}/>
       </View>
     </View>
