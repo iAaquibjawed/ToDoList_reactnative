@@ -11,7 +11,7 @@ export default function App() {
   }
 
   function addGoalHandler(){
-    setCourseGoals(currentGoals=>[...currentGoals, enteredGoalText])
+    setCourseGoals(currentGoals=>[...currentGoals, {text: enteredGoalText, key: Math.random().toString()}]);
   }
   return (
     <View style={styles.appContainer}>
@@ -56,14 +56,5 @@ const styles = StyleSheet.create({
   goalsContainer:{
     flex:5,
   },
-  goalItem:{
-    margin: 8,
-    borderRadius: 6,
-    backgroundColor: '#530acc',
-    padding: 8,
-    color: 'white'
-  },
-  goalText:{
-    color: 'white'
-  }
+  
 });
