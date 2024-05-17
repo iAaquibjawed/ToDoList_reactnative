@@ -5,6 +5,9 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    // if we add background color here it will apply to all screen
+    "backgroundColor": "#1e085a",
+    "color"
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
