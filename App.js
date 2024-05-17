@@ -9,17 +9,14 @@ export default function App() {
   const [courseGoals, setCourseGoals] = useState([]);
 
   function addGoalHandler(enteredGoalText){
-    setCourseGoals(currentGoals=>[...currentGoals, {text: enteredGoalText, key: Math.random().toString()}]);
+    setCourseGoals(currentGoals=>[...currentGoals, {text: enteredGoalText, id: Math.random().toString()}]);
   }
 
 
   function deleteGoalHandler(id){
     setCourseGoals(currentGoals=>{
-      return currentGoals.filter((goal)=>{
-        return goal.id!== id;
-      });
+      return currentGoals.filter((goal)=>goal.id !== id);
     });
-
   }
 
 
