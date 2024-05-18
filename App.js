@@ -60,3 +60,8 @@ const styles = StyleSheet.create({
     flex:5,
   }
 });
+
+
+// npm install -g react-devtools
+// best tool to debug the app you can start it with command
+// react-devtools
